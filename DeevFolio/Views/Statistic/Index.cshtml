@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="alert alert-danger">Kategori Sayısı: @ViewBag.categoryCount</div>
+<br />
+<div class="alert alert-warning">Proje Sayısı: @ViewBag.projectCount</div>
+<br />
+<div class="alert alert-success">Yetenek Sayısı: @ViewBag.skillCount</div>
+<br />
+<div class="alert alert-dark">Ortalama Yetenek Puanı: @ViewBag.skillAvgValue</div>
+<br />
+<div class="alert alert-primary">Son Eklenen Yetenek: @ViewBag.lastSkillTitleName</div>
+<br />
+<div class="alert alert-info">Son Eklenen Yetenek: @ViewBag.coreCategoryProjectCount</div>

@@ -41,5 +41,16 @@ namespace DeevFolio.Controllers
             var value = db.TblSkill.Find(id);
             return View(value);
         }
+        [HttpPost]
+        public ActionResult UpdateSkill(TblSkill p)
+        {//Güncellemek istediğim değeri buluyorum. Neye göre ? paramaetreden gelen skillid ye göre
+            var value = db.TblSkill.Find(p.SkillID);
+            value.SkillTitle = p.SkillTitle;
+            value.SkillValue = p.SkillValue;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+
+        }
     }
 }
