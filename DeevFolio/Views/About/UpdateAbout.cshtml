@@ -1,0 +1,17 @@
+﻿@model DeevFolio.Models.TblAbout
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Hakkımda Yazısı Güncelle</h2>
+<form method="post">
+    <label>Hakkımda Yazısı ID</label>
+    @Html.TextBoxFor(x => x.AboutID, new {@class="form-control"})
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new {@class="form-control"})
+    <br />
+    <button class="btn btn-info">Hakkımda Yazısı Güncellle</button>
+</form>
+

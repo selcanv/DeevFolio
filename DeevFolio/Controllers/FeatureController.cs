@@ -4,50 +4,51 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DeevFolio.Models;
-
 namespace DeevFolio.Controllers
 {
-    public class CategoryController : Controller
+    public class FeatureController : Controller
     {
         DevFolioDbEntities db = new DevFolioDbEntities();
         public ActionResult Index()
         {
-            var values = db.TblCategory.ToList();
+            var values = db.TblFeature.ToList();
             return View(values);
         }
         [HttpGet]
-        public ActionResult CreateCategory()
+        public ActionResult CreateFeature()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult CreateCategory(TblCategory p)
+        public ActionResult CreateFeature(TblFeature p)
         {
-            db.TblCategory.Add(p);
+            db.TblFeature.Add(p);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult DeleteCategory(int id)
+        public ActionResult DeleteFeature(int id)
         {
-            var value = db.TblCategory.Find(id);
-            db.TblCategory.Remove(value);
+            var value = db.TblFeature.Find(id);
+            db.TblFeature.Remove(value);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult UpdateCategory(int id)
+        public ActionResult UpdateFeature(int id)
         {
-            var value = db.TblCategory.Find(id);
+            var value = db.TblFeature.Find(id);
             return View(value);
         }
         [HttpPost]
-        public ActionResult UpdateCategory(TblCategory p)
+        public ActionResult UpdateFeature(TblFeature p)
         {
-            var value = db.TblCategory.Find(p.CategoryID);
-            value.CategoryID = p.CategoryID;
-            value.CategoryName = p.CategoryName;
+            var value = db.TblFeature.Find(p.FeatureID);
+            value.FeatureID = p.FeatureID;
+            value.HeaderDescription = p.HeaderDescription;
+            value.HeaderTitle = p.HeaderTitle;
             db.SaveChanges();
             return RedirectToAction("Index");
+
         }
     }
 }

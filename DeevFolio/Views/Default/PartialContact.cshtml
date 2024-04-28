@@ -1,0 +1,43 @@
+﻿@model List<DeevFolio.Models.TblContact>
+<div class="col-md-6">
+    <div class="title-box-2">
+        <h5 class="title-left">
+            Mesaj Gönderin
+        </h5>
+    </div>
+    <div>
+        <form action="" method="post" role="form" class="contactForm">
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <input type="text" name="NameSurname" class="form-control" id="name" placeholder="Adınız" data-rule="minlen:4" data-msg="Lütfen en az 4 karakter girin." />
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="Email" id="email" placeholder="Email" data-rule="email" data-msg="Lütfen geçerli bir eposta adresi giriniz." />
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Subject" id="subject" placeholder="Konu" data-rule="minlen:4" data-msg="Lütfen en az 8 karakterlik konu girin" />
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <textarea class="form-control" name="Message" rows="5" data-rule="required" data-msg="Lütfen benim için bir şeyler yazın." placeholder="Mesaj"></textarea>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="button button-a button-big button-rouded">Mesaj Gönder</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

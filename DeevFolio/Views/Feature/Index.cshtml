@@ -1,0 +1,30 @@
+﻿@model List<DeevFolio.Models.TblFeature>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Özellik Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FeatureID</td>
+            <td>@item.HeaderTitle</td>
+            <td>@item.HeaderDescription</td>
+            <td><a href="/Feature/DeleteFeature/@item.FeatureID/" class="btn btn-warning">Sil</a></td>
+            <td><a href="/Feature/UpdateFeature/@item.FeatureID/" class="btn btn-success">Güncelle</a></td>
+        </tr>
+
+    }
+</table>
+
+<a href="/Feature/CreateFeature" class="btn btn-info">Yeni Özellik Girişi</a>
+

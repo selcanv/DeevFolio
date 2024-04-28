@@ -1,0 +1,17 @@
+﻿@model DeevFolio.Models.TblFeature
+@{
+    ViewBag.Title = "CreateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Özellik Girişi</h2>
+<form method="post">
+
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.HeaderTitle, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.HeaderDescription, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Özelliği Kaydet</button>
+</form>

@@ -1,14 +1,26 @@
-﻿
+﻿@model List<DeevFolio.Models.TblCategory>
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h3>Merhaba dünya</h3>
-<h4>DeFolio Projesi</h4>
-<div style="background-color:cadetblue">Burası bir divdir</div>
-<br />
-<div style="background-color:orangered">Burası ikinci div alanıdır.</div>
-<br />
-<a href="http://www.google.com">Google git</a>
-<hr />
-<a href="http://www.mynet.com">Mynete git</a>
+<h2>Category Sayfası</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kategori Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.CategoryID</td>
+                    <td>@item.CategoryName</td>
+                    <td><a href="/Category/DeleteCategory/@item.CategoryID/" class="btn btn-warning">Sil</a></td>
+                    <td><a href="/Category/UpdateCategory/@item.CategoryID/" class="btn btn-success">Güncelle</a></td>
+                </tr>
+            }
+</table>
+
+<a href="/Category/CreateCategory" class="btn btn-info">Yeni Kategori Girişi</a>

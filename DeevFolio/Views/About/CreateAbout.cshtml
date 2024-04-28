@@ -1,0 +1,14 @@
+﻿@model DeevFolio.Models.TblAbout
+@{
+    ViewBag.Title = "CreateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Hakkımda Yazısı Girişi</h2>
+<form method="post">
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new {@class="form-control"})
+    <br />
+    <button class="btn btn-info">Hakkımda Yazısı Kaydet</button>
+</form>
+
