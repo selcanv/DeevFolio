@@ -1,9 +1,38 @@
-﻿
+﻿@model List<DeevFolio.Models.TblContact>
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<div style="margin-left:100px;background-color:yellow; margin-right:100px">
+<h2>Mesaj Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Adı Soyadı</th>
+        <th>Email</th>
+        <th>Konu</th>
+        <th>Tarih</th>
+        <th>Okundu Bilgisi</th>
+        <th>Oku</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ContactID</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Email</td>
+            <td>@item.Subject</td>
+            <td>@item.SendMessageDate</td>
+            <td>@item.IsRead</td>
+            <td><a href="/Contact/ReadContact/@item.ContactID" class="btn btn-success">Oku</a></td>
+            <td><a href="/Contact/DeleteContact/@item.ContactID" class="btn btn-warning">Sil</a></td>
+        </tr>
+
+    }
+</table>
+
+@*<div style="margin-left:100px;background-color:yellow; margin-right:100px">
     <h3>Mesaj Gönderme Sayfası</h3>
     <label>Adınız soyadınız:</label>
     <input type="text" />
@@ -18,4 +47,4 @@
     <textarea rows="5"></textarea>
     <br />
     <button>Mesaj gönder</button>
-</div>
+</div>*@
