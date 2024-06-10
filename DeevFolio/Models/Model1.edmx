@@ -137,6 +137,8 @@
           </ReferentialConstraint>
         </Association>
         <Function Name="GetLastSkillTitle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_ActiveSocialMedia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_LastService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DevFolioDbModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
@@ -312,6 +314,8 @@
             <End Role="TblProject" EntitySet="TblProject" />
           </AssociationSet>
           <FunctionImport Name="GetLastSkillTitle" ReturnType="Collection(String)" />
+          <FunctionImport Name="sp_ActiveSocialMedia" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="sp_LastService" ReturnType="Collection(String)" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -452,6 +456,8 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="GetLastSkillTitle" FunctionName="DevFolioDbModel.Store.GetLastSkillTitle" />
+          <FunctionImportMapping FunctionImportName="sp_ActiveSocialMedia" FunctionName="DevFolioDbModel.Store.sp_ActiveSocialMedia" />
+          <FunctionImportMapping FunctionImportName="sp_LastService" FunctionName="DevFolioDbModel.Store.sp_LastService" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

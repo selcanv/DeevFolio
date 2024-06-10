@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "DownloadCV";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+@Html.ActionLink("CV İndir", "DownloadCV", "CvDownload", null, new { @class = "navbar-link" })
+
+
+
+@*
+@Html.ActionLink: MVC'de bir controller action metodunu çağırmak için kullanılan yardımcı bir fonksiyondur.Bu durumda, "CV İndir" metniyle bir bağlantı oluşturulur.
+"DownloadCV": Bağlantının yönlendirileceği action metodunun adıdır.
+
+"Home": Controller sınıfının adıdır. Bu durumda, HomeController.
+
+null: Action metoduna geçirilecek parametrelerdir. Burada kullanılmıyor, bu yüzden null geçiyoruz.
+
+new { @class = "navbar-link" }: HTML bağlantısına eklenmek üzere CSS sınıfı belirten bir nesnedir. 
+Bu durumda, bağlantıya navbar-link sınıfı eklenir.
+ *@

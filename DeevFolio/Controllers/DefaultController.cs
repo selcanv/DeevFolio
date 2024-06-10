@@ -98,7 +98,7 @@ namespace DeevFolio.Controllers
 
         public PartialViewResult PartialFooter()
         {
-        
+
             return PartialView();
 
         }
@@ -107,5 +107,8 @@ namespace DeevFolio.Controllers
         {
             return PartialView();
         }
+
+
+
     }
 }

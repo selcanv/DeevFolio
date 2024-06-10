@@ -133,6 +133,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\CvDownloadController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -241,6 +242,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\404Error\css\styles.css" />
+    <Content Include="Templates\404Error\error-404-monochrome.svg" />
+    <Content Include="Templates\404Error\js\datatables-simple-demo.js" />
+    <Content Include="Templates\404Error\js\scripts.js" />
     <Content Include="Templates\devfolio-master\blog-single.html" />
     <Content Include="Templates\devfolio-master\contactform\contactform.js" />
     <Content Include="Templates\devfolio-master\contactform\Readme.txt" />
@@ -508,6 +513,11 @@
     <Content Include="Views\Profile\CreateProfile.cshtml" />
     <Content Include="Views\Profile\UpdateProfile.cshtml" />
     <Content Include="Views\Contact\ReadContact.cshtml" />
+    <Content Include="Views\CvDownload\DownloadCV.cshtml" />
+    <Content Include="Templates\cv.pdf" />
+    <Content Include="Views\CvDownload\Error.cshtml" />
+    <Content Include="Views\Contact\ContactForm.cshtml" />
+    <Content Include="Views\Contact\ContactSuccess.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

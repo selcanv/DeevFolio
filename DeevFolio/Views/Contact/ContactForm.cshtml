@@ -1,0 +1,23 @@
+﻿@model DeevFolio.Models.TblContact
+@{
+    ViewBag.Title = "ContactForm";
+    Layout = "~/Views/Default/Index.cshtml";
+}
+
+@using (Html.BeginForm("SaveContact", "Contact", FormMethod.Post))
+{
+    @Html.LabelFor(model => model.NameSurname)
+    @Html.TextBoxFor(model => model.NameSurname)
+    <br />
+    @Html.LabelFor(model => model.Email)
+    @Html.TextBoxFor(model => model.Email)
+    <br />
+    @Html.LabelFor(model => model.Subject)
+    @Html.TextBoxFor(model => model.Subject)
+    <br />
+    @Html.LabelFor(model => model.Message)
+    @Html.TextAreaFor(model => model.Message)
+    <br />
+    <input type="submit" value="Gönder" />
+}
+

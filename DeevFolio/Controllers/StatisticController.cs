@@ -25,7 +25,11 @@ namespace DeevFolio.Controllers
 
             //1numaralı kategoriye ait proje(Asp.net core) 
             ViewBag.coreCategoryProjectCount = db.TblProject.Where(x => x.ProjectCategory == 1).Count();
-
+            //******************************************************************************************
+            ViewBag.serviceCount = db.TblService.Count();
+            ViewBag.socialMediaCount = db.TblSocialMedia.Count();
+            ViewBag.activeSocialMedia = db.sp_ActiveSocialMedia().FirstOrDefault();
+            ViewBag.lastService = db.sp_LastService().FirstOrDefault();
             return View();
         }
     }

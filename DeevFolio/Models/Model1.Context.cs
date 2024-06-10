@@ -45,5 +45,15 @@ namespace DeevFolio.Models
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastSkillTitle");
         }
+    
+        public virtual ObjectResult<Nullable<int>> sp_ActiveSocialMedia()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_ActiveSocialMedia");
+        }
+    
+        public virtual ObjectResult<string> sp_LastService()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("sp_LastService");
+        }
     }
 }
